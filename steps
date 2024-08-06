@@ -1,0 +1,38 @@
+step 1
+php artisan make:migration create_stocks_table --create=stocks
+--create=stocks -> stocks is table name
+** at this step we define the columns of the table **
+
+step 2
+php artisan migrate
+** at this step we create the table on the database **
+
+step 3
+php artisan make:model stocks
+** at this step we create the class (model) **
+
+in the class if i want to set the table manually
+// Explicitly specify the table name
+protected $table = 'stocks';
+
+step 4
+
+#normal way
+$stock = new Stock();
+$stock->stock_id = $request->input('stock-id');
+$stock->description = $request->input('description');
+$stock->save();
+
+#mass assigment way
+
+firstly in the class we must do this
+protected $fillable = ['stock_id', 'description'];
+
+then we can use mass way
+$stock = Stock::create([
+'stock_id' => $request->input('stock-id'),
+'description' => $request->input('description')
+]);
+** this will create the object and save it on the database **
+
+** set the data in the object then use save() function to store it on the database

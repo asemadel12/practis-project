@@ -1,0 +1,12 @@
+<script src="{{ asset('js/bootstrap.bundle.js') }}"></script>
+<!-- <script src="{{ asset('js/bootstrap.bundle.js.map') }}"></script> -->
+<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+<!-- <script src="{{ asset('js/bootstrap.bundle.min.js.map') }}"></script> -->
+<!-- <script src="{{ asset('js/bootstrap.esm.js') }}"></script> -->
+<!-- <script src="{{ asset('js/bootstrap.esm.js.map') }}"></script> -->
+<!-- <script src="{{ asset('js/bootstrap.esm.min.js') }}"></script> -->
+<!-- <script src="{{ asset('js/bootstrap.esm.min.js.map') }}"></script> -->
+<script src="{{ asset('js/bootstrap.js') }}"></script>
+<!-- <script src="{{ asset('js/bootstrap.js.map') }}"></script> -->
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<!-- <script src="{{ asset('js/bootstrap.min.js.map') }}"></script> -->
