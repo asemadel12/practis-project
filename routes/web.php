@@ -2,14 +2,18 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UploadItemsController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
+//login
 Route::post('/login-form', [LoginController::class, 'loginValidation'])->name('login.form'); //هون وديناه على كنترولر عشان نسوي فالديشن
-Route::get('/', function () {
-    return view('login');
-})->name('login');
+Route::get('/', [LoginController::class, 'index'])->name('login');
+
+//register
+Route::post('/register', [RegisterController::class, 'register'])->name('register-form');
+Route::get('/register', [RegisterController::class, 'index'])->name('register');
 
 // Logout route
 Route::post('/logout', function () {

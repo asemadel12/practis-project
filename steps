@@ -8,7 +8,7 @@ php artisan migrate
 ** at this step we create the table on the database **
 
 step 3
-php artisan make:model stocks
+php artisan make:model Stock
 ** at this step we create the class (model) **
 
 in the class if i want to set the table manually
